@@ -11,15 +11,15 @@ public class App {
         ArrayList<String> fileText = new ArrayList<>();
         ArrayList<String> formatedNames = new ArrayList<>();
         ArrayList<String> sortedNames = new ArrayList<>();
-        
-        CustomFileReader reader = new CustomFileReader();
-        fileText = reader.read("ADA03\\src\\n" + //
-                        "ombres.txt");
-        TextFormatter formatter = new TextFormatter();
-        formatedNames = formatter.formatText(fileText);
-        TextSorter sorter = new TextSorter();
-        sortedNames = sorter.sortText(formatedNames);
         TextPrinter printer = new TextPrinter();
+        TextSorter sorter = new TextSorter();
+        TextFormatter formatter = new TextFormatter();
+        CustomFileReader reader = new CustomFileReader();
+
+        fileText = reader.read("ADA03\\src\\nombres.txt");
+        printer.printText(fileText);
+        formatedNames = formatter.formatText(fileText);
+        sortedNames = sorter.sortText(formatedNames);
         printer.printText(sortedNames);
     }   
 }
