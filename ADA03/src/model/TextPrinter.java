@@ -3,13 +3,13 @@ package src.model;
 import java.util.ArrayList;
 
 public class TextPrinter {
-    private ArrayList<String> sentences;
+    
 
-    public TextPrinter(ArrayList<String> sentences){
-        this.sentences = sentences;
+    public TextPrinter(){
+        
     }
     
-    public void printText(){
+    public void printText(ArrayList<String> sentences){
         for (String sentence : sentences){
             System.out.println(sentence);
         }

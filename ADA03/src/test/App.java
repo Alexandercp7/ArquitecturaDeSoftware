@@ -8,16 +8,18 @@ import src.model.TextSorter;
 
 public class App {
     public static void main(String[] args) {
-        ArrayList<String> fileNames = new ArrayList<>();
+        ArrayList<String> fileText = new ArrayList<>();
         ArrayList<String> formatedNames = new ArrayList<>();
-        CustomFileReader reader = new CustomFileReader("C:\\Users\\eacan\\Documents\\Pers\\arquitectura-software\\ADA03\\n" + //
+        ArrayList<String> sortedNames = new ArrayList<>();
+        
+        CustomFileReader reader = new CustomFileReader();
+        fileText = reader.read("ADA03\\src\\n" + //
                         "ombres.txt");
-        fileNames = reader.read();
-        TextFormatter formatter = new TextFormatter(fileNames);
-        formatedNames = formatter.formatText();
-        TextSorter sorter = new TextSorter(formatedNames);
-        sorter.sortText();
-        TextPrinter printer = new TextPrinter(formatedNames);
-        printer.printText();
+        TextFormatter formatter = new TextFormatter();
+        formatedNames = formatter.formatText(fileText);
+        TextSorter sorter = new TextSorter();
+        sortedNames = sorter.sortText(formatedNames);
+        TextPrinter printer = new TextPrinter();
+        printer.printText(sortedNames);
     }   
 }

@@ -1,17 +1,15 @@
 package src.model;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 
 public class TextSorter {
-    private ArrayList<String> sentences;
+    
 
-    public TextSorter(ArrayList<String> sentences){
-        this.sentences = sentences;
+    public TextSorter(){   
     }
 
-    public ArrayList<String> sortText(){
+    public ArrayList<String> sortText(ArrayList<String> sentences){
         Collections.sort(sentences);
         return sentences;
     }

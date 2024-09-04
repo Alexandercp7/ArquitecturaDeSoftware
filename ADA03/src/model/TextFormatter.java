@@ -3,13 +3,13 @@ import java.util.ArrayList;
 
 
 public class TextFormatter {
-    private ArrayList<String> sentences;
+ 
 
-    public TextFormatter(ArrayList<String> sentences){
-        this.sentences = sentences;
+    public TextFormatter(){
+        
     }
 
-    public ArrayList<String> formatText(){
+    public ArrayList<String> formatText(ArrayList<String> sentences){
         ArrayList<String> formattedSentences = new ArrayList<>();
         for(String sentence : sentences){
             String[] words = sentence.split(" ");

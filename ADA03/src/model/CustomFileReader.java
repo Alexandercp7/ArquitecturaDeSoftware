@@ -5,13 +5,13 @@ import java.io.FileReader;
 import java.util.ArrayList;
 
 public class CustomFileReader {
-    private String filePath;
+   
 
-    public CustomFileReader(String filePath) { 
-        this.filePath = filePath;
+    public CustomFileReader() { 
+        
     }
 
-    public ArrayList<String> read(){
+    public ArrayList<String> read(String filePath){
         ArrayList<String> content = new ArrayList<>();
         try(BufferedReader reader = new BufferedReader(new FileReader(filePath))){
             
