@@ -11,7 +11,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String sentence = scanner.nextLine();
 
-        KwicProcessor kwicProcessor = new KwicProcessor(sentence, "stopWords.txt");
+        KwicProcessor kwicProcessor = new KwicProcessor(sentence, "StopWords.txt");
 
         List<String> textRotations = kwicProcessor.processText();
 

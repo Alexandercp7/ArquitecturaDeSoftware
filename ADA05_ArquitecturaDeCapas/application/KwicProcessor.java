@@ -21,6 +21,8 @@ public class KwicProcessor {
         List<String> formattedText = textFormatter.processText(text, stopWords);
         TextRotator textRotator = new TextRotator();
         List<String> rotatedText = textRotator.rotateText(formattedText);
-        return rotatedText;
+        TextSorter textSorter = new TextSorter();
+        List<String> sortedText = textSorter.sortText(rotatedText);
+        return sortedText;
     }
 }
